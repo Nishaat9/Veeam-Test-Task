@@ -1,17 +1,23 @@
 # Veeam-Test-Task
 ## Problem Statement:
-A program needs to be developed in one of the following languages: Python, C/C++, C# that synchronizes the folder contents uni-directionally from Source to Replica folder. Contents from Source folder to replica folder are to be qin sync. Synchronization to be performed in regular intervals. Files actions (creation/copying/removal) are to be logged in a file and are to be displayed in console output. Folder paths, synchronization interval and log file path to be passed as command line arguments. 
+A program needs to be developed in one of the following languages: Python, C/C++, C# that synchronizes the folder contents uni-directionally from Source to Replica folder. Contents from Source folder to replica folder are to be in sync. Synchronization to be performed in regular intervals. Files actions (creation/copying/removal) are to be logged in a file and are to be displayed in console output. Folder paths, synchronization interval and log file path to be passed as command line arguments. 
 
 ## Test Cases:
 There are 4 cases considered for testing:
+
 a. Check if the Source folder path and the replica folder path exists
+
 b. Files are available in the Source folder but not in Replica folder
-- File are copied to replica folder from Source folder
+ - File are copied to replica folder from Source folder
+
 c. Files are available in Replica folder but removed from Source folder
-- Files from replica folder are removed based on Source folder. Log is created for the removed files in log folder and in console
-d. File exists in both Source folder and in Replica folder with version difference - File versions are synced in replica folder based upon source folder file
+ - Files from replica folder are removed based on Source folder. Log is created for the removed files in log folder and in console
+
+d. File exists in both Source folder and in Replica folder with version difference 
+- File versions are synced in replica folder based upon source folder file
 
 ## Approach:
+The program is developed with Python
 1. Importing modules/libraries to work with several functionalities.
 2. Created a parser object that retrieves in-line arguments i.e., source path, replica path,
 log file path, and sync interval (in seconds)
